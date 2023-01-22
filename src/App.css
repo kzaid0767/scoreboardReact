@@ -3,9 +3,56 @@
   text-align: center;
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
+  /* width: 90vw; */
+}
+
+.team-score{
+  width: 70%;
+  border: red solid 2px;
 }
 
 h1{
   margin: 0;
+  text-transform: uppercase;
+  color: #EEEEEE;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2;
+  font-size: calc(16 + 1vw);
 }
 
+.score-holder{
+  font-family: 'Orbitron', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(2rem + 1vw);
+  background-color: black;
+  color: #F94F6D;
+  margin-bottom: 1rem;
+  
+}
+button{
+  font-family: 'Orbitron', sans-serif;
+  background: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #9AABD8;
+  border: #9AABD8 solid 2px;
+}
+
+
+
+@media (max-width: 360px) {
+  .App{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .team-score{
+    width: 60%;
+  }
+}

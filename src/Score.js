@@ -15,22 +15,22 @@ function Score(props) {
     }
 
     return (
-        <div>
+        <div className='team-score'>
             <h1>{props.team}</h1>
-            <div>{score}</div>
-            <Button number={1} click={handleAdd} />
-            <Button number={2} click={handleAdd}/>
-            <Button number={3} click={handleAdd}/>
-            <Button number={1} click={handleSubtract}/>
+            <div className='score-holder'>{score}</div>
+            <Button number={1} sign={'+'} click={handleAdd} />
+            <Button number={2} sign={'+'} click={handleAdd}/>
+            <Button number={3} sign={'+'} click={handleAdd}/>
+            <Button number={1} sign={'-'} click={handleSubtract}/>
         </div>
     )
 }
 
 export default Score
 
-const Button = ({number, click}) => {
+const Button = ({number, click, sign}) => {
 
     return (
-        <button onClick={()=>click(number)}>{number}</button>
+        <button onClick={()=>click(number)}>{sign}{number}</button>
     )
 }

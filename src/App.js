@@ -4,8 +4,13 @@ import Score from './Score';
 function App() {
   return (
     <div className="App">
-      <Score team={'home'} />
-      <Score team={'guest'} />
+      <div>
+        <Score team={'home'} />
+      </div>
+      <div>
+        <Score team={'guest'} />
+      </div>
+      
     </div>
   );
 }
