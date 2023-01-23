@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from './Button'
 
 function Score(props) {
 
@@ -28,9 +29,3 @@ function Score(props) {
 
 export default Score
 
-const Button = ({number, click, sign}) => {
-
-    return (
-        <button onClick={()=>click(number)}>{sign}{number}</button>
-    )
-}

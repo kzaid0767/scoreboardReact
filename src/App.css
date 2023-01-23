@@ -1,58 +1,74 @@
 .App {
-  background-color: #0C4A6E;
+  background-color: #0c4a6e;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 10px;
   padding: 1rem;
   /* width: 90vw; */
 }
 
-.team-score{
-  width: 70%;
-  border: red solid 2px;
-}
+/* .team-score {
+  border: red solid 2px; 
+} */
 
-h1{
+h1 {
   margin: 0;
   text-transform: uppercase;
-  color: #EEEEEE;
-  font-family: 'Verdana';
+  color: #eeeeee;
+  font-family: "Verdana";
   font-style: normal;
   font-weight: 700;
   line-height: 2;
-  font-size: calc(16 + 1vw);
+  font-size: 2.5rem;
 }
 
-.score-holder{
-  font-family: 'Orbitron', sans-serif;
+.score-holder,
+input {
+  font-family: "Orbitron", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: calc(2rem + 1vw);
+  font-size: 3rem;
+  width: 8rem;
   background-color: black;
-  color: #F94F6D;
-  margin-bottom: 1rem;
-  
+  color: #f94f6d;
+  margin: 0 auto;
+  border: none;
+  text-align: center;
 }
-button{
-  font-family: 'Orbitron', sans-serif;
+button {
+  font-family: "Orbitron", sans-serif;
   background: none;
   font-style: normal;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.8;
   text-align: center;
-  color: #9AABD8;
-  border: #9AABD8 solid 2px;
+  color: #9aabd8;
+  border: #9aabd8 solid 2px;
+  margin: 0.5rem;
 }
 
-
+@media (min-width: 400px) {
+  .App {
+    width: 60vw;
+  }
+}
 
 @media (max-width: 360px) {
-  .App{
+  .App {
+    display: flex;
     flex-direction: column;
     margin: 0 auto;
   }
-  .team-score{
-    width: 60%;
+  .team-score {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  button {
+    width: auto;
+    margin: 0.5rem 0;
   }
 }
